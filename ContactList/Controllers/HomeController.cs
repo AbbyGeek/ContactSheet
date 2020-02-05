@@ -9,22 +9,21 @@ namespace ContactList.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext _context;
+
+        public HomeController()
+        {
+            _context = new ApplicationDbContext();
+        }
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
         public ActionResult Index()
         {
-            var contacts = GetContacts();
+            var contacts = _context.Contacts.ToList();
             return View(contacts);
         }
-
-        private IEnumerable<Contact> GetContacts()
-        {
-            return new List<Contact>
-            {
-                new Contact() {id=1,firstName = "John", lastName="Smith", company="Working Company", address="123 home lane", email="ab@123.com", primaryPhone=1234432343, secondaryPhone=5555555555},
-                new Contact() {id=2, firstName = "John", lastName="Smith II", company="Working Company", address="123 home lane", email="ab@123.com", primaryPhone=1234432343, secondaryPhone=5555555555},
-                new Contact() {id=3, firstName = "John", lastName="Smith III", company="Working Company", address="123 home lane", email="ab@123.com", primaryPhone=1234432343, secondaryPhone=5555555555}
-            };
-        }
-
 
         public ActionResult AddContact()
         {
@@ -34,7 +33,7 @@ namespace ContactList.Controllers
 
         public ActionResult ViewContact(int id)
         {
-            var contact = GetContacts().SingleOrDefault(c => c.id == id);
+            var contact = _context.Contacts.SingleOrDefault(c => c.id == id);
             if (contact == null)
             {
                 return HttpNotFound();
