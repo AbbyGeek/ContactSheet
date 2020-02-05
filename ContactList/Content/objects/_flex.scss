@@ -1,0 +1,11 @@
+﻿.o-flex {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+o-flex__item {
+    flex: 1;
+    display: inline-block;
+}

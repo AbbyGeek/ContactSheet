@@ -1,0 +1,10 @@
+﻿@model ContactList.Models.Contact
+@using System.Web.Optimization
+
+@{
+    ViewBag.Title = "ViewContact";
+}
+@Html.ActionLink("<Home", "Index", "Home", null, new { @class = "" })
+
+<h2>@Model.firstName @Model.lastName</h2>
+

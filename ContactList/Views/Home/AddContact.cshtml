@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "AddContact";
+}
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
+
+<form>
+    <label for="firstName">First Name</label>
+    <input type="text" name="firstName" />
+    <label for="lastName">Last Name</label>
+    <input type="text" name="lastName" />
+    <label for="company">Company</label>
+    <input type="text" name="company" value="" />
+    <label for="email">Email</label>
+    <input type="email" name="email" value="" />
+    <label for="phone">Phone</label>
+    <input type="tel" name="phone" value="" />
+    <label for="secondaryPhone">Secondary Phone</label>
+    <input type="tel" name="secondaryPhone" value="" />
+    <label for="address">Address</label>
+    <input type="text" name="address" value="" />
+    <input type="submit" value="Save" />
+</form>
