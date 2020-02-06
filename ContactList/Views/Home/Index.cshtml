@@ -5,31 +5,31 @@
 
 <div class="o-flex">
     <h1 class="o-flex__item u-float__left">Contact List</h1>
-    <button class="o-flex___item c-button u-float__right" onclick="window.location.href='/Home/AddContact'">Add Contact</button>
+    <button class="o-flex___item c-button u-float__right" onclick="window.location.href='/Home/ContactForm'">Add Contact</button>
 </div>
 <table class="table table-bordered table-hover">
     <thead>
         <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Company</th>
+            <th>Name</th>
+            @*<th>Company</th>*@
             <th>Email</th>
             <th>Primary Phone</th>
-            <th>Secondary Phone</th>
-            <th>Address</th>
+            @*<th>Secondary Phone</th>*@
+            @*<th>Address</th>*@
+            <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var contact in Model)
         {
-            <tr onclick="window.location='/home/viewcontact/@contact.id'">
-                <td>@contact.firstName</td>
-                <td>@contact.lastName</td>
-                <td>@contact.company</td>
-                <td>@contact.email</td>
-                <td>@contact.primaryPhone</td>
-                <td>@contact.secondaryPhone</td>
-                <td>@contact.address</td>
+            <tr>
+                <td onclick="window.location='/home/viewcontact/@contact.id'">@contact.firstName @contact.lastName</td>
+                @*<td onclick="window.location='/home/viewcontact/@contact.id'">@contact.company</td>*@
+                <td onclick="window.location='/home/viewcontact/@contact.id'">@contact.email</td>
+                <td onclick="window.location='/home/viewcontact/@contact.id'">@contact.primaryPhone</td>
+                @*<td onclick="window.location='/home/viewcontact/@contact.id'">@contact.secondaryPhone</td>*@
+                @*<td onclick="window.location='/home/viewcontact/@contact.id'">@contact.address</td>*@
+                <td>@Html.ActionLink("Delete", "Delete", "Home",new { id = contact.id} , "class='btn'")</td>
             </tr>
         }
     </tbody>

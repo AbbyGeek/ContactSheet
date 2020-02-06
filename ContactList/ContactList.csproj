@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\LibSassHost.Native.win-x86.1.2.10\build\LibSassHost.Native.win-x86.props" Condition="Exists('..\packages\LibSassHost.Native.win-x86.1.2.10\build\LibSassHost.Native.win-x86.props')" />
   <Import Project="..\packages\LibSassHost.Native.win-x64.1.2.10\build\LibSassHost.Native.win-x64.props" Condition="Exists('..\packages\LibSassHost.Native.win-x64.1.2.10\build\LibSassHost.Native.win-x64.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -184,6 +185,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -196,6 +198,22 @@
     <Compile Include="Migrations\202002051717201_InitialModel1.cs" />
     <Compile Include="Migrations\202002051717201_InitialModel1.Designer.cs">
       <DependentUpon>202002051717201_InitialModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002062010240_Updating contact validation.cs" />
+    <Compile Include="Migrations\202002062010240_Updating contact validation.Designer.cs">
+      <DependentUpon>202002062010240_Updating contact validation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002062107054_changng model valdaton.cs" />
+    <Compile Include="Migrations\202002062107054_changng model valdaton.Designer.cs">
+      <DependentUpon>202002062107054_changng model valdaton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002062116319_update validation.cs" />
+    <Compile Include="Migrations\202002062116319_update validation.Designer.cs">
+      <DependentUpon>202002062116319_update validation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002062118310_updating validation.cs" />
+    <Compile Include="Migrations\202002062118310_updating validation.Designer.cs">
+      <DependentUpon>202002062118310_updating validation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -267,11 +285,12 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\AddContact.cshtml" />
+    <Content Include="Views\Home\ContactForm.cshtml" />
     <Content Include="Views\Home\ViewContact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Contacts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -292,6 +311,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002051717201_InitialModel1.resx">
       <DependentUpon>202002051717201_InitialModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002062010240_Updating contact validation.resx">
+      <DependentUpon>202002062010240_Updating contact validation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002062107054_changng model valdaton.resx">
+      <DependentUpon>202002062107054_changng model valdaton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002062116319_update validation.resx">
+      <DependentUpon>202002062116319_update validation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002062118310_updating validation.resx">
+      <DependentUpon>202002062118310_updating validation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -328,6 +359,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
     <Error Condition="!Exists('..\packages\LibSassHost.Native.win-x64.1.2.10\build\LibSassHost.Native.win-x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\LibSassHost.Native.win-x64.1.2.10\build\LibSassHost.Native.win-x64.props'))" />
+    <Error Condition="!Exists('..\packages\LibSassHost.Native.win-x86.1.2.10\build\LibSassHost.Native.win-x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\LibSassHost.Native.win-x86.1.2.10\build\LibSassHost.Native.win-x86.props'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

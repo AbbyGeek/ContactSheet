@@ -119,3 +119,8 @@ C:\Users\awessels\OneDrive - KNEX\Documents\Projects\New folder\ContactList\Cont
 C:\Users\awessels\OneDrive - KNEX\Documents\Projects\New folder\ContactList\ContactList\obj\Debug\ContactList.Migrations.InitialModel.resources
 C:\Users\awessels\OneDrive - KNEX\Documents\Projects\New folder\ContactList\ContactList\obj\Debug\ContactList.csproj.GenerateResource.cache
 C:\Users\awessels\OneDrive - KNEX\Documents\Projects\New folder\ContactList\ContactList\obj\Debug\ContactList.Migrations.InitialModel1.resources
+C:\Users\awessels\OneDrive - Knex\Documents\Projects\New folder\ContactList\ContactList\obj\Debug\ContactList.Migrations.Updatingcontactvalidation.resources
+C:\Users\awessels\OneDrive - Knex\Documents\Projects\New folder\ContactList\ContactList\bin\x86\libsass.dll
+C:\Users\awessels\OneDrive - Knex\Documents\Projects\New folder\ContactList\ContactList\obj\Debug\ContactList.Migrations.changngmodelvaldaton.resources
+C:\Users\awessels\OneDrive - Knex\Documents\Projects\New folder\ContactList\ContactList\obj\Debug\ContactList.Migrations.updatevalidation.resources
+C:\Users\awessels\OneDrive - Knex\Documents\Projects\New folder\ContactList\ContactList\obj\Debug\ContactList.Migrations.updatingvalidation.resources

@@ -4,7 +4,19 @@
 @{
     ViewBag.Title = "ViewContact";
 }
-@Html.ActionLink("<Home", "Index", "Home", null, new { @class = "" })
 
 <h2>@Model.firstName @Model.lastName</h2>
 
+<div>
+    <ul>
+        <li>Company: @Model.company</li>
+        <li>Email: @Model.email</li>
+        <li>Phone: @Model.primaryPhone</li>
+        @if (Model.secondaryPhone=="")
+        {
+            <li>Secondary Phone: @Model.secondaryPhone</li>
+        }
+        <li>Address: @Model.address</li>
+    </ul>
+</div>
+@Html.ActionLink("Edit Contact", "Edit", "Home", new { id = Model.id }, "class='btn'")

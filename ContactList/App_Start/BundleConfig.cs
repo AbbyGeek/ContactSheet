@@ -30,13 +30,14 @@ namespace ContactList
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
 
+
             var nullBulider = new NullBuilder();
             var nullOrderer = new NullOrderer();
 
             BundleResolver.Current = new CustomBundleResolver();
-            var commonStyleBundle = new CustomStyleBundle("~/Bundle/sass");
+            var commonStyleBundle = new CustomStyleBundle("~/Content/sass");
 
-            commonStyleBundle.Include("~/css/main.scss");
+            commonStyleBundle.Include("~/Content/main.scss");
             commonStyleBundle.Orderer = nullOrderer;
             bundles.Add(commonStyleBundle);
         }

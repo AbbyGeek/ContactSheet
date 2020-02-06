@@ -25,10 +25,37 @@ namespace ContactList.Controllers
             return View(contacts);
         }
 
-        public ActionResult AddContact()
+        public ActionResult ContactForm()
         {
-            ViewBag.Message = "Add Contact";
+            
             return View();
+        }
+        [HttpPost]
+        public ActionResult Save(Contact contact)
+        {
+            if(!ModelState.IsValid)
+            {
+                return View("ContactForm", contact);
+            }
+            if(contact.id == 0)
+            {
+                _context.Contacts.Add(contact);
+            }
+            else
+            {
+                var contactInDb = _context.Contacts.Single(c => c.id == contact.id);
+
+                contactInDb.firstName = contact.firstName;
+                contactInDb.lastName = contact.lastName;
+                contactInDb.company = contact.company;
+                contactInDb.email = contact.email;
+                contactInDb.primaryPhone = contact.primaryPhone;
+                contactInDb.secondaryPhone = contact.secondaryPhone;
+                contactInDb.address = contact.address;
+            }
+
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Home");
         }
 
         public ActionResult ViewContact(int id)
@@ -39,6 +66,24 @@ namespace ContactList.Controllers
                 return HttpNotFound();
             }
             return View(contact);
+        }
+
+        public ActionResult Delete(int id)
+        {
+            var contact = _context.Contacts.SingleOrDefault(c => c.id == id);
+            _context.Contacts.Remove(contact);
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Home");
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var contact = _context.Contacts.SingleOrDefault(c => c.id == id);
+            if (contact == null)
+            {
+                return HttpNotFound();
+            }
+            return View("ContactForm", contact);
         }
     }
 }
