@@ -5,12 +5,12 @@
 
 <h2>@ViewBag.Title</h2>
 
-@using (Html.BeginForm("Save", "Home"))
+@using (Html.BeginForm("Save", "Contacts"))
 {
     <div class="form-group">
         @Html.LabelFor(m => m.firstName)
         @Html.TextBoxFor(m => m.firstName, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m=>m.firstName)
+        @Html.ValidationMessageFor(m => m.firstName)
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.lastName)
@@ -30,7 +30,7 @@
     <div class="form-group">
         @Html.LabelFor(m => m.primaryPhone)
         @Html.TextBoxFor(m => m.primaryPhone, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m=>m.primaryPhone)
+        @Html.ValidationMessageFor(m => m.primaryPhone)
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.secondaryPhone)

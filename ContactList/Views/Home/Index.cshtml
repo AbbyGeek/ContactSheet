@@ -5,7 +5,7 @@
 
 <div class="o-flex">
     <h1 class="o-flex__item u-float__left">Contact List</h1>
-    <button class="o-flex___item c-button u-float__right" onclick="window.location.href='/Home/ContactForm'">Add Contact</button>
+    <button class="o-flex___item c-button u-float__right" onclick="window.location.href='/Contacts/ContactForm'">Add Contact</button>
 </div>
 <table class="table table-bordered table-hover">
     <thead>
@@ -23,13 +23,13 @@
         @foreach (var contact in Model)
         {
             <tr>
-                <td onclick="window.location='/home/viewcontact/@contact.id'">@contact.firstName @contact.lastName</td>
+                <td onclick="window.location='/contacts/viewcontact/@contact.id'">@contact.firstName @contact.lastName</td>
                 @*<td onclick="window.location='/home/viewcontact/@contact.id'">@contact.company</td>*@
-                <td onclick="window.location='/home/viewcontact/@contact.id'">@contact.email</td>
-                <td onclick="window.location='/home/viewcontact/@contact.id'">@contact.primaryPhone</td>
+                <td onclick="window.location='/contacts/viewcontact/@contact.id'">@contact.email</td>
+                <td onclick="window.location='/contacts/viewcontact/@contact.id'">@contact.primaryPhone</td>
                 @*<td onclick="window.location='/home/viewcontact/@contact.id'">@contact.secondaryPhone</td>*@
                 @*<td onclick="window.location='/home/viewcontact/@contact.id'">@contact.address</td>*@
-                <td>@Html.ActionLink("Delete", "Delete", "Home",new { id = contact.id} , "class='btn'")</td>
+                <td>@Html.ActionLink("Delete", "Delete", "Contacts",new { id = contact.id} , "class='btn'")</td>
             </tr>
         }
     </tbody>

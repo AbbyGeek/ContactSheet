@@ -12,11 +12,11 @@
         <li>Company: @Model.company</li>
         <li>Email: @Model.email</li>
         <li>Phone: @Model.primaryPhone</li>
-        @if (Model.secondaryPhone=="")
+        @if (Model.secondaryPhone == "")
         {
             <li>Secondary Phone: @Model.secondaryPhone</li>
         }
         <li>Address: @Model.address</li>
     </ul>
 </div>
-@Html.ActionLink("Edit Contact", "Edit", "Home", new { id = Model.id }, "class='btn'")
+@Html.ActionLink("Edit Contact", "Edit", "Contacts", new { id = Model.id }, "class='btn'")
