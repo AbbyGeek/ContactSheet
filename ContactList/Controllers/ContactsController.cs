@@ -20,12 +20,6 @@ namespace ContactList.Controllers
             _context = new ApplicationDbContext();
         }
 
-        //public ActionResult Index()
-        //{
-        //    var contacts = _context.Contacts.ToList();
-        //    return View(contacts);
-        //}
-
         public ActionResult ContactForm()
         {
             return View();
@@ -55,6 +49,7 @@ namespace ContactList.Controllers
             }
 
             _context.SaveChanges();
+            TempData["successMessage"] = "Success!";
             return RedirectToAction("Index", "Home");
         }
 

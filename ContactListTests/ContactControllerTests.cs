@@ -138,7 +138,7 @@ namespace ContactList.Tests
             Assert.IsInstanceOfType(result, typeof(RedirectToRouteResult));
             var SingleOrDefaultMethodResult = mockSet.Object.SingleOrDefault(m => m.id == contact.id);
             Assert.AreEqual(SingleOrDefaultMethodResult.firstName, contact.firstName);
-    //        _context.Verify(m => m.Contacts.Remove(contact), Times.Once);
+            _context.Verify(m => m.Contacts.Remove(It.IsAny<Contact>()), Times.Once);
             _context.Verify(m => m.SaveChanges(), Times.Once);
 
 

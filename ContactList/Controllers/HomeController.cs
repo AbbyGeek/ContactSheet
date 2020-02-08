@@ -23,6 +23,10 @@ namespace ContactList.Controllers
         public ActionResult Index()
         {
             var contacts = _context.Contacts.ToList();
+            if (TempData["successMessage"] != null)
+            {
+                ViewBag.Message = TempData["successMessage"].ToString();
+            }
             return View(contacts);
         }
     }
