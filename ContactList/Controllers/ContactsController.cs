@@ -34,10 +34,10 @@ namespace ContactList.Controllers
         public ActionResult Save(Contact contact)
         {
 
-            //if(!ModelState.IsValid)
-            //{
-            //    return View("ContactForm", contact);
-            //}
+            if(!ModelState.IsValid)
+            {
+                return View("ContactForm", contact);
+            }
             if (contact.id == 0)
             {
                 _context.Contacts.Add(contact);
@@ -85,6 +85,12 @@ namespace ContactList.Controllers
                 return HttpNotFound();
             }
             return View("ContactForm", contact);
+        }
+
+        public ActionResult New()
+        {
+            var ViewModel = new Contact();
+            return View("ContactForm", ViewModel);
         }
     }
 }
