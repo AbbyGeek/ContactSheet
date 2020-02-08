@@ -3,22 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ContactList.Interfaces;
 using ContactList.Models;
 
 namespace ContactList.Controllers
 {
     public class ContactsController : Controller
     {
-        private ApplicationDbContext _context;
-
+        private IApplicationDbContext _context;
+        public ContactsController(IApplicationDbContext context)
+        {
+            _context = context;
+        }
         public ContactsController()
         {
             _context = new ApplicationDbContext();
         }
-        protected override void Dispose(bool disposing)
-        {
-            _context.Dispose();
-        }
+
         //public ActionResult Index()
         //{
         //    var contacts = _context.Contacts.ToList();
@@ -27,13 +28,11 @@ namespace ContactList.Controllers
 
         public ActionResult ContactForm()
         {
-
             return View();
         }
         [HttpPost]
         public ActionResult Save(Contact contact)
         {
-
             if(!ModelState.IsValid)
             {
                 return View("ContactForm", contact);

@@ -19,7 +19,7 @@ namespace ContactList.Models
         }
     }
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplicationDbContext
     {
         public DbSet<Contact> Contacts { get; set; }
         public ApplicationDbContext()
@@ -27,7 +27,7 @@ namespace ContactList.Models
         {
         }
 
-        public static ApplicationDbContext Create()
+        public ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }

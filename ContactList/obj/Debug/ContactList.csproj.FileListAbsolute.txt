@@ -239,7 +239,6 @@ C:\Users\awessels\OneDrive - Knex\Documents\Projects\ContactSheet\ContactList\bi
 C:\Users\awessels\OneDrive - Knex\Documents\Projects\ContactSheet\ContactList\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\awessels\OneDrive - Knex\Documents\Projects\ContactSheet\ContactList\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\awessels\OneDrive - Knex\Documents\Projects\ContactSheet\ContactList\bin\ru-ru\BundleTransformer.Core.resources.dll
-C:\Users\awessels\OneDrive - Knex\Documents\Projects\ContactSheet\ContactList\obj\Debug\ContactList.csprojAssemblyReference.cache
 C:\Users\awessels\OneDrive - Knex\Documents\Projects\ContactSheet\ContactList\obj\Debug\ContactList.Migrations.InitialModel.resources
 C:\Users\awessels\OneDrive - Knex\Documents\Projects\ContactSheet\ContactList\obj\Debug\ContactList.Migrations.InitialModel1.resources
 C:\Users\awessels\OneDrive - Knex\Documents\Projects\ContactSheet\ContactList\obj\Debug\ContactList.Migrations.Updatingcontactvalidation.resources
@@ -250,3 +249,4 @@ C:\Users\awessels\OneDrive - Knex\Documents\Projects\ContactSheet\ContactList\ob
 C:\Users\awessels\OneDrive - Knex\Documents\Projects\ContactSheet\ContactList\obj\Debug\ContactList.csproj.CopyComplete
 C:\Users\awessels\OneDrive - Knex\Documents\Projects\ContactSheet\ContactList\obj\Debug\ContactList.dll
 C:\Users\awessels\OneDrive - Knex\Documents\Projects\ContactSheet\ContactList\obj\Debug\ContactList.pdb
+C:\Users\awessels\OneDrive - KNEX\Documents\Projects\ContactSheet\ContactList\obj\Debug\ContactList.csprojAssemblyReference.cache

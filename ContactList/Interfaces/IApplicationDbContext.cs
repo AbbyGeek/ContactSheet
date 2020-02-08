@@ -12,6 +12,7 @@ namespace ContactList.Interfaces
     {
         DbSet<Contact> Contacts { get; set; }
         ApplicationDbContext Create();
+        int SaveChanges();
     }
    
 }

@@ -10,8 +10,8 @@ namespace ContactList.Controllers
 {
     public class HomeController : Controller
     {
-        private ApplicationDbContext _context;
-        public HomeController(ApplicationDbContext context)
+        private IApplicationDbContext _context;
+        public HomeController(IApplicationDbContext context)
         {
             _context = context;
         }
