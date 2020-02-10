@@ -1,7 +1,48 @@
-﻿.u-float__right {
-    float: right;
+﻿.u-marginH--lg{
+    margin: 0 4rem;
+}
+.u-marginH--med{
+    margin: 0 2rem;
+}
+.u-marginH--sm{
+    margin: 0 1rem;
 }
 
-.u-float__left {
+.u-marginV--med{
+    margin: 2rem 0;
+}
+
+.u-marginV-sm{
+    margin: 1rem 0;
+}
+
+.u-paddingV--lg{
+    padding: 4rem 0;
+}
+
+.u-paddingV--med{
+    padding: 2rem 0;
+}
+
+.u-paddingV--sm{
+    padding: 1rem 0;
+}
+
+.u-backgroundColor--grey{
+    background-color:$lightGrey;
+}
+
+.u-fontWeight--bold{
+    font-weight:700;
+}
+.u-listStyle--none {
+    list-style:none;
+}
+
+.u-alignItems--baseline{
+    align-items:baseline;
+}
+
+.u-float__right {
     float: right;
 }

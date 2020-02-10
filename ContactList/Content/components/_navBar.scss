@@ -1,12 +1,14 @@
-﻿.c_navbar {
+﻿.c-navbar {
     position: fixed;
     background-color: $charcoal;
+    top: 0;
+    width: 100%;
 }
 
 .c-navbar__mainLink {
     float: left;
-    height: 50px;
-    padding: 1rem 1rem;
-    font-size: 2.5rem;
+    padding: 1rem 2rem;
+    font-size: 2rem;
     color: $headerLinkGrey;
+    text-decoration:none;
 }

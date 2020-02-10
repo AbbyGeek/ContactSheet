@@ -1,0 +1,10 @@
+﻿.c-alert{
+    padding: 1rem;
+    margin-bottom: 20px;
+    border-radius: .5rem;
+}
+
+.c-alert__success {
+    color: $successMessage;
+    background-color: $successBackground;
+}

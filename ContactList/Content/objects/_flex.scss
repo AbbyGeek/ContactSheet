@@ -1,11 +1,37 @@
 ﻿.o-flex {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
-    justify-content: space-between;
 }
 
-.o-flex__item {
-    flex: 1;
-    display: inline-block;
+.o-flex\@l {
+    @media all and (min-width: 600px) {
+        flex-direction: row;
+
+        .o-flex__item {
+            flex: 1;
+            display: inline-block;
+        }
+    }
+}
+
+.o-flex\@m{
+    @media all and (min-width: 500px)
+    {
+        .o-flex__item {
+            flex: 1;
+            display: inline-block;
+        }
+    }
+}
+
+.o-flex\@s{
+    @media all and (min-width: 400px){
+        flex-direction: row;
+
+        .o-flex__item{
+            flex: 1;
+            display: inline-block;
+        }
+    }
 }

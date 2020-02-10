@@ -9,14 +9,12 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="c-navbar navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
+    <div class="c-navbar">
+            <div>
                 @Html.ActionLink("Contacts", "Index", "Home", null, new { @class = "c-navbar__mainLink" })
             </div>
-        </div>
     </div>
-    <div class="container body-content">
+    <div class="o-CenteredColumn--lg u-paddingV--lg">
         @RenderBody()
         <hr />
         <footer>

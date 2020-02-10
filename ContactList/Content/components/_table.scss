@@ -1,0 +1,24 @@
+﻿.c-table {
+    width: 100%;
+    border: 1px solid $tableBorder;
+    margin-bottom: 1.5rem;
+    border-collapse: collapse;
+}
+.c-table th {
+    height: 4rem;
+    text-align: left;
+    padding-left: 1rem;
+    border: 1px solid $tableBorder;
+    background-color: $tableHeadBackground;
+    color: white;
+}
+
+.c-table td {
+    padding: 1rem;
+    border: 1px solid $tableBorder;
+}
+
+.c-table tr:hover {
+    background-color: $lightGrey;
+}
+

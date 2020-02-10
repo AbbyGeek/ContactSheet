@@ -4,19 +4,23 @@
 @{
     ViewBag.Title = "ViewContact";
 }
-
-<h2>@Model.firstName @Model.lastName</h2>
-
-<div>
-    <ul>
-        <li>Company: @Model.company</li>
-        <li>Email: @Model.email</li>
-        <li>Phone: @Model.primaryPhone</li>
-        @if (Model.secondaryPhone == "")
-        {
-            <li>Secondary Phone: @Model.secondaryPhone</li>
-        }
-        <li>Address: @Model.address</li>
-    </ul>
-</div>
-@Html.ActionLink("Edit Contact", "Edit", "Contacts", new { id = Model.id }, "class='btn'")
+<div class="u-marginH--lg">
+    <div class="u-marginV--med">
+        <h2>@Model.firstName @Model.lastName</h2>
+    </div>
+    <div class="u-backgroundColor--grey u-paddingV--sm">
+        <ul class="u-listStyle--none">
+            <li>Email: <a href="mailto:@Model.email">@Model.email</a></li>
+            <li>Company: @Model.company</li>
+            <li>Primary Phone: @Model.primaryPhone</li>
+            @if (Model.secondaryPhone != null)
+            {
+                <li>Secondary Phone: @Model.secondaryPhone</li>
+            }
+            <li>Address: @Model.address</li>
+        </ul>
+    </div>
+    <div class="u-paddingV--sm">
+    @Html.ActionLink("Edit Contact", "Edit", "Contacts", new { id = Model.id }, new {@class="c-button"} )
+        </div>
+</>
