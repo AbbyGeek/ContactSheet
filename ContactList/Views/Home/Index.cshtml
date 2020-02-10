@@ -18,11 +18,9 @@
     <thead>
         <tr>
             <th>Name</th>
-            @*<th>Company</th>*@
             <th>Email</th>
             <th>Primary Phone</th>
-            @*<th>Secondary Phone</th>*@
-            @*<th>Address</th>*@
+
             <th></th>
         </tr>
     </thead>
@@ -31,11 +29,8 @@
         {
             <tr>
                 <td onclick="window.location='/contacts/viewcontact/@contact.id'">@contact.firstName @contact.lastName</td>
-                @*<td onclick="window.location='/home/viewcontact/@contact.id'">@contact.company</td>*@
                 <td onclick="window.location='/contacts/viewcontact/@contact.id'">@contact.email</td>
                 <td onclick="window.location='/contacts/viewcontact/@contact.id'">@contact.primaryPhone</td>
-                @*<td onclick="window.location='/home/viewcontact/@contact.id'">@contact.secondaryPhone</td>*@
-                @*<td onclick="window.location='/home/viewcontact/@contact.id'">@contact.address</td>*@
                 <td>@Html.ActionLink("Delete", "Delete", "Contacts",new { id = contact.id} , "class='btn'")</td>
             </tr>
         }

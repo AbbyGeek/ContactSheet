@@ -237,7 +237,6 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\base\_type.scss" />
     <Content Include="Content\components\_button.scss" />
-    <Content Include="Content\components\_footer.scss" />
     <Content Include="Content\components\_navBar.scss" />
     <Content Include="Content\objects\_flex.scss" />
     <Content Include="Content\settings\_colors.scss" />
